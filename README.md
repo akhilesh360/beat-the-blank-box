@@ -2,6 +2,8 @@
 
 > **PM case study + working prototype** · AI chat onboarding · Problem sized on 29,446 real conversations (WildChat-1M); A/B test planned, not run
 
+**▶ 60-second demo (plays automatically)**
+
 ![60-second walkthrough](docs/walkthrough.gif)
 
 **▶ [Live demo](https://akhilesh360.github.io/beat-the-blank-box/)** · **🎬 [Full video](docs/demo.webm)** · [Demo script](docs/demo-script.md)
@@ -112,4 +114,3 @@ Alternatives considered: a product tour (low effort, but users skip tours); bett
 
 **Data credit:** WildChat-1M, Allen Institute for AI, ODC-BY. Zhao, W., Ren, X., Hessel, J., Cardie, C., Choi, Y., and Deng, Y. (2024). *WildChat: 1M ChatGPT Interaction Logs in the Wild.* ICLR 2024. [arXiv:2405.01470](https://arxiv.org/abs/2405.01470)
 
-**About:** Built by Sai Akhilesh Veldi. [Portfolio](#) · [LinkedIn](https://www.linkedin.com/in/akhileshsai/)
