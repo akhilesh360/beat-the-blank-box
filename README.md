@@ -8,29 +8,7 @@
 
 ## How it works
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"fontSize":"18px","fontFamily":"Inter, Helvetica, Arial, sans-serif","lineColor":"#64748b"},"flowchart":{"curve":"basis","nodeSpacing":40,"rankSpacing":50}}}%%
-flowchart LR
-  A(["<b>Problem</b><br/>Blank box: users<br/>don't know what to ask"])
-  B(["<b>Step 1</b><br/>Pick your role"])
-  C(["<b>Step 2</b><br/>3 starter tasks,<br/>pre-filled"])
-  D(["<b>Feature</b><br/>First win<br/>in session 1"])
-  E(["<b>North Star</b><br/>Day-7 retention"])
-  F(["<b>A/B test</b><br/>13k users,<br/>clear decision rule"])
-  A --> B --> C --> D --> E --> F
-  classDef problem fill:#fee2e2,stroke:#ef4444,stroke-width:2px,color:#7f1d1d,font-weight:bold
-  classDef data fill:#e0f2fe,stroke:#0284c7,stroke-width:2px,color:#0c4a6e,font-weight:bold
-  classDef insight fill:#ede9fe,stroke:#7c3aed,stroke-width:2px,color:#3b0764,font-weight:bold
-  classDef feature fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d,font-weight:bold
-  classDef metric fill:#fef3c7,stroke:#d97706,stroke-width:2px,color:#78350f,font-weight:bold
-  classDef test fill:#f1f5f9,stroke:#334155,stroke-width:2px,color:#0f172a,font-weight:bold
-  class A problem
-  class B data
-  class C insight
-  class D feature
-  class E metric
-  class F test
-```
+![How it works](docs/flow.png)
 
 ## 1. User and problem
 **Who:** first-week users of a general AI chat app who signed up to get work done (analysts, PMs, marketers, students, engineers, recruiters), not AI enthusiasts.
