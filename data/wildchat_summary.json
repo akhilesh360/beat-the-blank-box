@@ -1,0 +1,100 @@
+{
+  "conversations": 29446,
+  "period": "2023-04-09 to 2023-05-04",
+  "median_words": 37.0,
+  "p25_words": 11.0,
+  "p75_words": 142.0,
+  "share_vague": 0.0924,
+  "share_under_6_words": 0.0924,
+  "share_generic_opener": 0.0224,
+  "one_turn_rate": 0.5382,
+  "one_turn_rate_vague": 0.2925,
+  "one_turn_rate_specific": 0.5632,
+  "n_vague": 2721,
+  "z_vague_vs_specific": -27.0,
+  "by_length": [
+    {
+      "words": "1-5",
+      "share": 0.0924,
+      "one_turn_rate": 0.2925
+    },
+    {
+      "words": "6-10",
+      "share": 0.1368,
+      "one_turn_rate": 0.4629
+    },
+    {
+      "words": "11-20",
+      "share": 0.1586,
+      "one_turn_rate": 0.4735
+    },
+    {
+      "words": "21-50",
+      "share": 0.1785,
+      "one_turn_rate": 0.57
+    },
+    {
+      "words": "51-100",
+      "share": 0.1282,
+      "one_turn_rate": 0.6621
+    },
+    {
+      "words": "101-300",
+      "share": 0.1484,
+      "one_turn_rate": 0.6381
+    },
+    {
+      "words": "300+",
+      "share": 0.1572,
+      "one_turn_rate": 0.5817
+    }
+  ],
+  "labelled": 180,
+  "role_mix": {
+    "none": 119,
+    "engineer": 25,
+    "student": 25,
+    "marketer": 8,
+    "analyst": 3
+  },
+  "topic_mix": {
+    "creative writing / role-play": 0.267,
+    "coding": 0.139,
+    "homework & study": 0.133,
+    "general knowledge": 0.117,
+    "writing & editing (non-fiction)": 0.111,
+    "advice & other": 0.078,
+    "greeting / no task": 0.061,
+    "marketing & content": 0.044,
+    "jailbreak / agent prompt": 0.033,
+    "data & analysis": 0.017
+  },
+  "classifier": {
+    "labelled": 180,
+    "in_scope": 61,
+    "none_or_other": 119,
+    "in_scope_coverage_pct": 52.5,
+    "in_scope_accuracy_when_committing_pct": 40.6,
+    "in_scope_end_to_end_accuracy_pct": 21.3,
+    "none_false_commit_pct": 48.7,
+    "overall_correct_pct": 41.1,
+    "per_role_correct": {
+      "engineer": [
+        7,
+        25
+      ],
+      "analyst": [
+        2,
+        3
+      ],
+      "student": [
+        3,
+        25
+      ],
+      "marketer": [
+        1,
+        8
+      ]
+    }
+  }
+}
