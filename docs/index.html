@@ -22,10 +22,19 @@
     <h1>What do you do for work?</h1>
     <p class="muted">Pick one and we'll show you three things you can try right now.</p>
     <div id="roles" class="roles"></div>
+    <form id="intent-form" class="intent-form">
+      <label for="intent-input" class="muted">Or just type what you want to do:</label>
+      <div class="intent-row">
+        <input id="intent-input" type="text" placeholder="e.g. help me fix a slow SQL query" autocomplete="off">
+        <button type="submit">Go</button>
+      </div>
+      <p id="intent-note" class="muted" aria-live="polite"></p>
+    </form>
   </section>
 
   <section id="step-tasks" class="card" hidden>
     <p class="step">Step 2 of 3</p>
+    <p id="intent-guess" class="intent-guess" hidden></p>
     <h1 id="tasks-title">Try one of these</h1>
     <p class="muted">Each one is a real prompt with an example answer. Tap one to run it.</p>
     <div id="tasks" class="tasks"></div>
@@ -51,6 +60,8 @@
 
 <footer class="foot">Canned answers only. No API calls, no data leaves your browser. <a href="https://github.com/akhilesh360/beat-the-blank-box">Case study on GitHub</a></footer>
 <script src="data.js"></script>
+<script src="intent_train.js"></script>
+<script src="intent.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

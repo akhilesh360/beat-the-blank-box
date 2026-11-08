@@ -36,9 +36,14 @@
     });
   }
 
-  function pickRole(id) {
+  function pickRole(id, guess) {
     state.role = ROLES.find(function (r) { return r.id === id; });
-    track("onboarding_role_selected", { role: id });
+    track("onboarding_role_selected", guess
+      ? { role: id, source: "typed_intent", confidence: +guess.confidence.toFixed(2) }
+      : { role: id, source: "button" });
+    $("intent-guess").hidden = !guess;
+    if (guess) $("intent-guess").textContent = "Looks like you're a " + state.role.label.toLowerCase() +
+      " (" + Math.round(guess.confidence * 100) + "% confident), here are 3 tasks. Not right? Tap Change role.";
     $("tasks-title").textContent = "Three things a " + state.role.label.toLowerCase() + " can try now";
     var box = $("tasks");
     box.innerHTML = "";
@@ -124,6 +129,21 @@
     reply(match ? match.answer : window.BLANK_ANSWER);
   }
 
+  // Typed instead of tapping a role: guess the role with the on-page classifier.
+  var MIN_CONFIDENCE = 0.4;
+  function guessRole(e) {
+    e.preventDefault();
+    var text = $("intent-input").value.trim();
+    if (!text || !window.Intent) return;
+    var g = window.Intent.classify(window.Intent.model, text);
+    if (g.known === 0 || g.confidence < MIN_CONFIDENCE) {
+      $("intent-note").textContent = "Not sure which role fits that. Pick one above.";
+      return;
+    }
+    $("intent-note").textContent = "";
+    pickRole(g.label, g);
+  }
+
   function setVariant(v) {
     state.variant = v;
     state.startedAt = Date.now();
@@ -143,6 +163,7 @@
   $("change-role").addEventListener("click", function () { show("step-role"); });
   $("back-tasks").addEventListener("click", function () { show("step-tasks"); });
   $("composer").addEventListener("submit", send);
+  $("intent-form").addEventListener("submit", guessRole);
   $("input").addEventListener("keydown", function (e) {
     if (e.key === "Enter" && !e.shiftKey) send(e);
   });

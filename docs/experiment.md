@@ -25,6 +25,9 @@ If new users pick their role and see 3 ready-to-run tasks for it, more of them w
 
 **Decision rule:** ship if day-7 retention is significantly higher and no guardrail worsens by more than an agreed bound (proposed: drop-off < 10%, typed messages not down > 5%).
 
+## Analysis script
+`scripts/analyze_ab.py` runs this plan on an events CSV (columns: the common fields above plus `event` and `properties` as JSON): Beta-Binomial posterior and z-test on day-7 retention, plus guardrail checks. `scripts/simulate_events.py` makes **simulated** data to test it; no real data exists yet.
+
 ## Sample size
 `scripts/sample_size.py` computes users per arm for a two-proportion test.
 
@@ -43,7 +46,7 @@ All events carry: `user_id`, `session_id`, `timestamp`, `variant` (`old` | `new`
 | Event | When | Extra properties |
 |---|---|---|
 | `onboarding_viewed` | first screen shown |, |
-| `onboarding_role_selected` | role tapped (B only) | `role` |
+| `onboarding_role_selected` | role tapped or guessed from typed text (B only) | `role`, `source` (`button` \| `typed_intent`), `confidence` |
 | `starter_tasks_shown` | tasks rendered (B only) | `role`, `task_count`, `task_ids` |
 | `starter_task_clicked` | task or chip tapped | `role`, `task_index`, `task_id` |
 | `first_message_sent` | first message of the account | `source` (`starter_task` \| `typed`), `ms_since_start` |

@@ -62,3 +62,10 @@ h1 { font-size: 24px; margin: 0 0 6px; }
 .roles button, .task, .chips button, .toggle button { transition: background .15s, border-color .15s, box-shadow .15s; }
 @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Typed-intent path on step 1 */
+.intent-form { margin-top: 16px; }
+.intent-row { display: flex; gap: 8px; margin-top: 6px; }
+.intent-row input { flex: 1; min-width: 0; font: inherit; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); color: var(--text); }
+.intent-row button { font: inherit; padding: 10px 16px; border-radius: 10px; border: 1px solid var(--accent); background: var(--accent); color: #fff; cursor: pointer; }
+.intent-guess { margin: 0 0 6px; padding: 8px 12px; border-radius: 10px; background: var(--accent-soft); }
