@@ -12,6 +12,8 @@
 
 ![How it works](docs/flow.png)
 
+![Results at a glance](docs/results.png)
+
 ### Data
 
 | Component | Dataset | Source / owner | License | Size used | Real or simulated |
@@ -58,6 +60,9 @@ Every new user gets one useful, job-relevant answer in their first minute, so th
 **Not building:** long tutorials or product tours (skipped, and they delay the first answer); a big prompt library (recreates the blank box); personalisation from history (new users have none).
 
 ## 4. North Star metric
+
+![Metrics framework](docs/metrics.png)
+
 **Day-7 retention:** % of new users who send at least one message on any of days 1–7 after signup. It measures lasting value; first-session clicks would rise trivially and prove little.
 
 ## 5. Supporting metrics
@@ -86,6 +91,9 @@ The typed-intent classifier was added second and kept small (no model, about 100
 Alternatives considered: a product tour (low effort, but users skip tours); better answers to vague prompts (high effort, model work); re-engagement emails (only reach users who already left).
 
 ## 8. Experiment and learning
+
+![Experiment design](docs/experiment.png)
+
 **Test:** 50/50 A/B on new accounts, blank box vs role-based onboarding. Two-proportion z-test on day-7 retention, alpha 0.05, power 0.8. Full plan and 9-event tracking spec: [docs/experiment.md](docs/experiment.md).
 
 **Sample size** ([scripts/sample_size.py](scripts/sample_size.py)), using an **assumed** 20% baseline and 5,000 sign-ups/day: a 2-point lift needs 6,510 users per arm (13,020 total), about 3 days to enrol plus 7 to read. A 1-point lift needs 25,583 per arm.
