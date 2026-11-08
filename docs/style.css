@@ -1,0 +1,64 @@
+:root {
+  --bg: #f6f7f9; --card: #fff; --text: #16181d; --muted: #5d6573;
+  --line: #e2e5ea; --accent: #3a5bd9; --accent-soft: #eaefff; --user: #3a5bd9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111317; --card: #1a1d23; --text: #e9ebef; --muted: #9aa3b2;
+    --line: #2c313a; --accent: #7d97ff; --accent-soft: #232b45; --user: #4a67d6;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.top { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+  padding: 14px 16px; border-bottom: 1px solid var(--line); background: var(--card); }
+.brand { font-weight: 700; }
+.tag { font-size: 12px; font-weight: 500; color: var(--muted); border: 1px solid var(--line);
+  border-radius: 99px; padding: 1px 8px; margin-left: 6px; }
+.toggle { display: flex; background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 3px; }
+.toggle button { border: 0; background: none; color: var(--muted); padding: 7px 12px; border-radius: 8px;
+  font: inherit; font-size: 14px; cursor: pointer; }
+.toggle button[aria-selected="true"] { background: var(--card); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+main { max-width: 760px; margin: 24px auto; padding: 0 16px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+h1 { font-size: 24px; margin: 0 0 6px; }
+.step { margin: 0 0 4px; font-size: 13px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.muted { color: var(--muted); margin: 0 0 18px; }
+.roles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.roles button, .task { text-align: left; font: inherit; color: var(--text); background: var(--card);
+  border: 1px solid var(--line); border-radius: 12px; padding: 14px; cursor: pointer; }
+.roles button:hover, .task:hover, .roles button:focus-visible, .task:focus-visible { border-color: var(--accent); background: var(--accent-soft); outline: none; }
+.roles .icon { display: block; font-size: 22px; margin-bottom: 4px; }
+.tasks { display: grid; gap: 10px; }
+.task strong { display: block; margin-bottom: 4px; }
+.task span { color: var(--muted); font-size: 14px; }
+.link { margin-top: 14px; background: none; border: 0; color: var(--accent); font: inherit; cursor: pointer; padding: 0; }
+.messages { display: flex; flex-direction: column; gap: 10px; min-height: 220px; max-height: 55vh; overflow-y: auto; margin-bottom: 12px; }
+.empty { margin: auto; text-align: center; color: var(--muted); }
+.empty h2 { font-size: 22px; color: var(--text); margin: 0 0 4px; }
+.msg { max-width: 88%; padding: 10px 14px; border-radius: 14px; white-space: pre-wrap; }
+.msg.user { align-self: flex-end; background: var(--user); color: #fff; border-bottom-right-radius: 4px; }
+.msg.bot { align-self: flex-start; background: var(--bg); border: 1px solid var(--line); border-bottom-left-radius: 4px; }
+.msg.typing { color: var(--muted); font-style: italic; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chips button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--card); color: var(--text);
+  border-radius: 99px; padding: 6px 12px; cursor: pointer; }
+.chips button:hover { border-color: var(--accent); }
+.composer { display: flex; gap: 8px; }
+.composer textarea { flex: 1; resize: vertical; font: inherit; color: var(--text); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; }
+.composer button { font: inherit; border: 0; border-radius: 12px; padding: 0 18px; background: var(--accent); color: #fff; cursor: pointer; }
+.events { max-width: 760px; margin: 0 auto 16px; padding: 12px 16px; font-size: 13px; color: var(--muted); }
+.events ol { margin: 6px 0 0; padding-left: 20px; font-family: ui-monospace, Menlo, monospace; }
+.foot { text-align: center; font-size: 13px; color: var(--muted); padding: 0 16px 24px; }
+.foot a { color: var(--accent); }
+@media (max-width: 520px) {
+  .card { padding: 18px; } h1 { font-size: 20px; }
+  .toggle { width: 100%; } .toggle button { flex: 1; padding: 7px 6px; }
+}
+.card:not([hidden]) { animation: rise .25s ease-out; }
+.msg { animation: rise .2s ease-out; }
+.roles button, .task, .chips button, .toggle button { transition: background .15s, border-color .15s, box-shadow .15s; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
