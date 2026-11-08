@@ -2,9 +2,9 @@
 
 > **PM case study + working prototype** · AI chat onboarding · No user data yet (research and A/B test are planned, not run)
 
-![Before vs after: blank box vs role-based starter tasks](docs/hero.png)
+![60-second walkthrough](docs/walkthrough.gif)
 
-**▶ [Live demo](https://akhilesh360.github.io/beat-the-blank-box/)** · **🎬 [60-second walkthrough](docs/demo.webm)** · [Demo script](docs/demo-script.md)
+**▶ [Live demo](https://akhilesh360.github.io/beat-the-blank-box/)** · **🎬 [Full video](docs/demo.webm)** · [Demo script](docs/demo-script.md)
 
 ## How it works
 
