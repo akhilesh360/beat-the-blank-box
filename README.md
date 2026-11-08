@@ -1,4 +1,4 @@
-# Beat the Blank Box — turn "what do I ask?" into a first win in under a minute
+# Beat the Blank Box: turn "what do I ask?" into a first win in under a minute
 
 > **PM case study + working prototype** · AI chat onboarding · No user data yet (research and A/B test are planned, not run)
 
@@ -71,4 +71,4 @@ Alternatives considered: a product tour (low effort, but users skip tours); bett
 ---
 **How to run it** · open `docs/index.html` in a browser (no build, no keys) · deep links `?variant=old`, `?role=analyst&task=0` · `python3 scripts/sample_size.py --baseline 0.20 --mde 0.02 --daily-users 5000` · GitHub Pages: deploy `main`, folder `/docs`
 
-**About** — Built by Sai Akhilesh Veldi. [Portfolio](#) · [LinkedIn](https://www.linkedin.com/in/akhileshsai/)
+**About**, Built by Sai Akhilesh Veldi. [Portfolio](#) · [LinkedIn](https://www.linkedin.com/in/akhileshsai/)

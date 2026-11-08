@@ -1,4 +1,4 @@
-# Interview guide (plan — not yet run)
+# Interview guide (plan: not yet run)
 
 **Goal:** learn why new users stop after their first AI chat session, and which work tasks would make a good first win per role.
 **Who:** 8–10 people who signed up for an AI chat tool in the last 30 days, mixed roles, including some who stopped using it.

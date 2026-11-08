@@ -42,7 +42,7 @@ All events carry: `user_id`, `session_id`, `timestamp`, `variant` (`old` | `new`
 
 | Event | When | Extra properties |
 |---|---|---|
-| `onboarding_viewed` | first screen shown | — |
+| `onboarding_viewed` | first screen shown |, |
 | `onboarding_role_selected` | role tapped (B only) | `role` |
 | `starter_tasks_shown` | tasks rendered (B only) | `role`, `task_count`, `task_ids` |
 | `starter_task_clicked` | task or chip tapped | `role`, `task_index`, `task_id` |
