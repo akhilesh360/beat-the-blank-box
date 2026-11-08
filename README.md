@@ -6,6 +6,17 @@
 
 **▶ [Live demo](https://akhilesh360.github.io/beat-the-blank-box/)** · **🎬 [60-second walkthrough](docs/demo.webm)** · [Demo script](docs/demo-script.md)
 
+## How it works
+
+```mermaid
+flowchart LR
+  A["😣 Problem<br/>Blank box → users<br/>don't know what to ask"] --> B["👤 Pick role<br/>'I'm a data analyst'"]
+  B --> C["✨ 3 starter tasks<br/>pre-filled prompts"]
+  C --> D["💬 First win<br/>in session 1"]
+  D --> E["⭐ North Star<br/>Day-7 retention"]
+  E --> F["🧪 A/B test<br/>13k users,<br/>decision rule"]
+```
+
 ## 1. User and problem
 **Who:** first-week users of a general AI chat app who signed up to get work done (analysts, PMs, marketers, students, engineers, recruiters), not AI enthusiasts.
 
