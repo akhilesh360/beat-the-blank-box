@@ -6,7 +6,7 @@
 
 ![60-second walkthrough](docs/walkthrough.gif)
 
-**▶ [Live demo](https://akhilesh360.github.io/beat-the-blank-box/)** · **🎬 [Full video](docs/demo.webm)** · [Demo script](docs/demo-script.md)
+**Live demo: [akhilesh360.github.io/beat-the-blank-box](https://akhilesh360.github.io/beat-the-blank-box/)**
 
 ## How it works
 
